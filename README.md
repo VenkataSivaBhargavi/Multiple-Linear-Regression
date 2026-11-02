@@ -12,6 +12,7 @@ The project is implemented in Python using Pandas, NumPy, Matplotlib, and Scikit
 - Train a Multiple Linear Regression model.
 - Evaluate model performance using R² score and Root Mean Squared Error (RMSE).
 - Save the trained model as a Pickle file.
+
 📊 Dataset Description
 The notebook loads 50_Startups.csv, a dataset containing information about startup spending and profit.
 Column	Description
@@ -29,6 +30,7 @@ The notebook converts the categorical State values into numeric values:
 - Florida → 2
 The independent variables (X) are all columns except Profit. The dependent variable (y) is Profit.
 Note: This numeric mapping treats the states as numbers. For a more robust categorical-data approach, consider one-hot encoding the State column.
+
 
 🧠 Machine Learning Algorithm
 Multiple Linear Regression
@@ -64,6 +66,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 reg = LinearRegression()
 reg.fit(X_train, y_train)
+
+
 📈 Model Performance
 The notebook reports the following results:
 Metric	Result
@@ -78,6 +82,8 @@ R² Score
 The R² score indicates how much variation in the target variable is explained by the model. A score closer to 1.0 generally indicates a better fit on the evaluated data.
 Root Mean Squared Error (RMSE)
 RMSE measures the typical scale of prediction errors in the target variable's units. Lower values generally indicate smaller prediction errors.
+
+
 💾 Saving the Trained Model
 The notebook saves the trained regression model to MLR_MODEL.pkl using Pickle:
 import pickle
@@ -96,6 +102,8 @@ Only load Pickle files from trusted sources.
 - Matplotlib — plotting library imported in the notebook
 - Scikit-learn — data splitting, Linear Regression, and evaluation metrics
 - Pickle — model serialization
+
+
 📂 Project Structure
 An example GitHub repository structure is:
 Multiple-Linear-Regression/
@@ -104,6 +112,8 @@ Multiple-Linear-Regression/
 ├── 50_Startups.csv
 └── MLR_MODEL.pkl
 Include the dataset and model file only if you are permitted to share them. The notebook currently reads the dataset from /content/50_Startups.csv, which is a common Google Colab path. If running locally, update the path to match where the CSV is stored.
+
+
 🚀 How to Run
 1. Clone or download the repository.
 2. Install the required libraries:
@@ -112,6 +122,8 @@ Include the dataset and model file only if you are permitted to share them. The 
 4. Open MLR.ipynb in Jupyter Notebook, JupyterLab, or Google Colab.
 5. Run the notebook cells in order to train and evaluate the model.
 6. The notebook saves the trained model as MLR_MODEL.pkl.
+
+
 🔮 Future Improvements
 - Use one-hot encoding for the categorical State feature.
 - Perform exploratory data analysis and visualize feature relationships.
@@ -119,5 +131,7 @@ Include the dataset and model file only if you are permitted to share them. The 
 - Add cross-validation and residual analysis.
 - Build a web application for interactive profit prediction.
 - Add automated tests and a reproducible environment file.
+
+  
 ⭐ Conclusion
 This project demonstrates how Multiple Linear Regression can estimate startup profit from spending-related features and state information. It covers data preparation, model training, evaluation using R² and RMSE, and saving the trained model for later use.
